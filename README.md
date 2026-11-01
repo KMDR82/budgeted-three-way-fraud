@@ -1,8 +1,8 @@
-# Budgeted decision rules for fraud decision support
+# Budget-constrained three-way decisions for fraud detection
 
-Code and results for the manuscript *"Approve, review or block: an evaluation of budgeted decision rules for fraud decision support"* (under review).
+Code and results for the manuscript *"Budget-constrained three-way decisions for fraud detection: an empirical evaluation with calibrated scores"* by Ahmet Akkaya (under review).
 
-The study evaluates the decision layer that turns fraud scores into three actions (approve, send to an analyst for review, block) under a review budget. A budgeted Bayes policy (P7) is compared with six policies from the cost-sensitive, alert, reject-option and three-way decision literature on three public datasets and four scoring models (XGBoost, LightGBM, CatBoost, FT-Transformer).
+The study treats the choice between approving a transaction, sending it to an analyst for review and blocking it as a three-way decision whose boundary region (the reviews) is limited by analyst capacity. A budget-constrained three-way rule, the budgeted Bayes policy (P7), calibrates the scores of any classifier, accepts or rejects by amount-dependent expected cost and fills the boundary region with the transactions for which a review saves most in expectation. It is compared with six policies from the cost-sensitive, alert, reject-option and threshold-based three-way decision literature on three public datasets and four scoring models (XGBoost, LightGBM, CatBoost, FT-Transformer).
 
 ## Repository structure
 
@@ -57,6 +57,14 @@ The notebook also writes some tables and figures that are not part of the final 
 ## Requirements
 
 Python 3 with the packages in `requirements.txt`. The reported run used the Kaggle Python GPU image of October 2026 (TensorFlow 2.20).
+
+## Citation
+
+If you use this code, please cite the article (reference to be added on publication) and this repository:
+
+```
+A. Akkaya, budgeted-three-way-fraud: code and results for budget-constrained three-way decisions in fraud detection, GitHub repository, 2026. https://github.com/KMDR82/budgeted-three-way-fraud
+```
 
 ## Licence
 
